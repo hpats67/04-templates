@@ -27,6 +27,9 @@ Article.prototype.toHtml = function() {
 
   // TODO: Use the function that Handlebars gave you to return your filled-in
   //       html template for THIS article.
+
+  var html = template(this);
+  return html;
 };
 
 ourLocalData.sort(function(a,b) {
@@ -40,4 +43,3 @@ ourLocalData.forEach(function(ele) {
 articles.forEach(function(a){
   $('#articles').append(a.toHtml());
 });
-
